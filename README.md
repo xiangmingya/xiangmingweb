@@ -1,2 +1,1 @@
-# xiangmingweb
-个人页面
+# xm_guide-page

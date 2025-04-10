@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Graphic</title>
+<style>
+body {
+    margin: 0;
+    overflow: hidden;
+}
+
+.shape {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-color: #d1c4f7; /* 淡紫色 */
+    animation: float 6s ease-in-out infinite, morph 8s ease-in-out infinite;
+    opacity: 0.6;
+}
+
+/* 位置 */
+.top-left {
+    top: 5%;
+    left: 5%;
+}
+
+.bottom-right {
+    bottom: 5%;
+    right: 5%;
+    animation-delay: 3s;
+}
+
+/* 浮动动画 */
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px) translateX(0px);
+    }
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+}
+
+/* 边缘变化动画 */
+@keyframes morph {
+    0% {
+        border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+    }
+    25% {
+        border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+    }
+    50% {
+        border-radius: 60% 40% 40% 60% / 50% 50% 60% 40%;
+    }
+    75% {
+        border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+    }
+    100% {
+        border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+    }
+}
+
+
+</style>
+</head>
+<body>
+    <div class="shape top-left"></div>
+    <div class="shape bottom-right"></div>
+
+</body>
+</html>

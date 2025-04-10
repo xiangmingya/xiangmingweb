@@ -1,0 +1,270 @@
+@font-face {
+    font-family: 'Smiley Sans';
+    src: url('../font/SmileySans-Oblique.otf.woff2') format(woff2);
+}
+*:focus {
+    outline: none;
+}
+* {
+    pointer-events: none;
+}
+*:active {
+    outline: none;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Smiley Sans, Arial, sans-serif;
+    background-color: #f0f3ff;
+    color: #333;
+    overflow: auto;
+}
+
+a {
+    text-decoration: none;
+    /* 去除下划线 */
+    color: inherit;
+    /* 继承父元素的颜色 */
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 50px 12px;
+}
+
+.text-section {
+    max-width: 60%;
+}
+
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 60px;
+    letter-spacing: 2px;
+    margin: 0;
+    padding-bottom: 20px;
+}
+
+.subheading {
+    font-size: 20px;
+    margin-top: 10px;
+    color: #555;
+}
+
+.message {
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+}
+
+.first-stack-links {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+a.about-button {
+    display: flex;
+    padding: 0 36px;
+    background: #333;
+    color: #ffffff;
+    border-radius: 29px;
+    box-shadow: 0 12px 12px -9px rgba(0, 0, 0, .29);
+    margin-top: 25px;
+    width: fit-content;
+    transition: ease-in-out .3s;
+    white-space: nowrap;
+    align-items: center;
+    justify-content: center;
+    height: 48px;
+}
+
+.about-button.social-button {
+    margin-left: 8px;
+    padding: 0 16px;
+}
+
+.about-button.social-button i {
+    font-size: 20px;
+    line-height: 1;
+    min-width: 20px;
+}
+
+a.about-button:hover {
+    background: #a2a5ff;
+    box-shadow: 0 12px 12px -9px rgba(5, 51, 137, .29);
+}
+
+.social-button img {
+    width: 22px;
+}
+
+.avatar {
+    max-width: 35%;
+}
+
+.avatar img {
+    width: 100%;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 75px;
+}
+
+.progress-bar {
+    width: 70%;
+    height: 15px;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    padding-right: 50px;
+}
+
+.progress-bar-fill {
+    width: 50%;
+    height: 100%;
+    background-color: #a2a5ff;
+    border-radius: 15px;
+}
+
+.visitor-count {
+    font-size: 16px;
+    color: #555;
+    margin-left: 20px;
+    white-space: nowrap;
+}
+
+#busuanzi_value_site_pv {
+    display: inline;
+}
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+    /* 允许子元素在需要时换行 */
+    justify-content: flex-start;
+    /* 子元素在主轴上从开始位置对齐 */
+    margin-left: 30px;
+}
+
+.link-item {
+    width: 300px;
+    height: 100px;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.link-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+.link-item-flix {
+    display: flex;
+    /* 使用 flexbox 进行水平布局 */
+    align-items: center;
+    /* 让图片和文本垂直居中对齐 */
+    margin-bottom: 10px;
+    /* 与下方内容的间距 */
+}
+
+.link-item img {
+    width: 60px;
+    margin-right: 10px;
+}
+
+.link-item-flix p {
+    font-size: 25px;
+    margin: 0 20px;
+}
+
+.link-item>p {
+    font-size: 14px;
+    color: #a8a8a8;
+    margin-left: 25px;
+}
+
+.footer {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #777;
+}
+
+.footer a {
+    color: #777;
+    text-decoration: none;
+}
+
+.shape {
+    position: fixed;
+    width: 200px;
+    /* 设置宽度 */
+    height: 200px;
+    /* 设置高度 */
+    background-color: #d1c4f7;
+    animation: float 6s ease-in-out infinite, morph 8s ease-in-out infinite;
+    opacity: 0.6;
+    border-radius: 60% 40% 70% 30% / 30% 70% 40% 60%;
+    /* 设置初始不规则形状 */
+}
+
+
+/* 位置 */
+.top-left {
+    top: 5%;
+    left: 5%;
+}
+
+.bottom-right {
+    bottom: 5%;
+    right: 5%;
+    /* animation-delay: 3s; */
+}
+
+/* 浮动动画 */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0px) translateX(0px);
+    }
+
+    50% {
+        transform: translateY(-20px) translateX(10px);
+    }
+}
+
+/* 边缘变化动画 */
+@keyframes morph {
+    0% {
+        border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+    }
+
+    25% {
+        border-radius: 40% 60% 50% 50% / 60% 40% 60% 40%;
+    }
+
+    50% {
+        border-radius: 60% 40% 40% 60% / 50% 50% 60% 40%;
+    }
+
+    75% {
+        border-radius: 50% 50% 40% 60% / 60% 40% 50% 50%;
+    }
+
+    100% {
+        border-radius: 50% 50% 60% 40% / 40% 60% 40% 60%;
+    }
+}
